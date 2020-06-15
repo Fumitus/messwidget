@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Vieta Naujam įrašui</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.body.label }}<br>
+            {{ form.body(size=32) }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+<hr>
+    <h1>Hi, {{ user.username }}!</h1>
+<hr>
+    {% for post in posts %}
+    <div>
+        <p>Person on WEB says: <a href="{{ url_for('post', id=post.id) }}">{{ post.body }}</a></p>
+        <p>Message posted on: <b>{{ post.date_posted }}</b></p>
+        <p>Person read message: <a href="{{ url_for('message_seen', id=post.id) }}">{{ post.seen }}</a></p>
+    </div>
+<hr>
+    {% endfor %}
+{% endblock %}
