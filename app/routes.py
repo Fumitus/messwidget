@@ -4,7 +4,7 @@ from app.forms import PostForm, SeenPostForm
 from app.models import Posts
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
 def index():
     """Function to list posts and create new ones for Hardcoded User"""
