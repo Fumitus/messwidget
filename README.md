@@ -29,8 +29,8 @@ Don't worry if you will not complete all features listed above, do as much as yo
 I created basic Flask web application for testing. BLOG accepts messages and after `Submit` button is pressed this message is recorded to data base and message about new post is Flashed. By `default` new message have status `do not seen` and this info is kept in data base column `seen`. 
 BLOG have a message status descripton line: `Person read message: False` after `False` is pressed status is changed to `Person read message: True` and message about message was read is flashed.
 
-* My idea was to catch Flashed messages using `requests`library. `track_with_requests.py` file - Idea failed.
-* My idea was to indicate typing using `tkinter` library. `typing.py` file - Idea failed.
+* My idea was to catch Flashed messages using `requests`library. Command `(venv) python track_with_requests.py` starts the request and had to return message in the terminal about new post - Idea failed.
+* My idea was to indicate typing using `tkinter` library. Command `(venv) python typing.py` starts typing indicator, but I do not know how to implement this funtion to the microweb I created - Idea failed.
 
 
 # Follow steps below to reproduce my project.
